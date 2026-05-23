@@ -5,7 +5,7 @@ close all
 %% Lorentz Oscillator Response
 
 w0 = 1;        % resonance frequency
-gamma = 0.1;   % damping
+gamma = 1;   % damping
 
 w = linspace(0,2,2000);
 
