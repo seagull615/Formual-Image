@@ -1,0 +1,30 @@
+clear
+clc
+close all
+
+%% Lorentz Oscillator Response
+
+w0 = 1;        % resonance frequency
+gamma = 0.1;   % damping
+
+w = linspace(0,2,2000);
+
+%% Amplitude Response
+A = 1 ./ sqrt((w0^2 - w.^2).^2 + (gamma*w).^2);
+
+%% Plot
+figure
+plot(w,A,'LineWidth',2)
+
+xlabel('\omega')
+ylabel('Amplitude')
+
+title('Lorentz Oscillator Response')
+
+grid on
+xlim([0 2])
+
+%% Resonance line
+hold on
+xline(w0,'--')
+legend('Response','\omega_0')
